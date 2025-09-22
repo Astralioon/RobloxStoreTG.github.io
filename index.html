@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<!-- Секция шапки сайта -->
 <header>
     <div class="container">
         <h1 class="logo">Roblox <span>STORE</span></h1>
@@ -26,8 +27,10 @@
 </header>
 
 <main>
+    <!-- Секция "Герой" с анимированным фоном -->
     <section class="hero">
-        <div class="container">
+        <div id="tsparticles"></div>
+        <div class="container hero-content">
             <h1>Лучшие товары для твоих любимых игр</h1>
             <p>Прокачай свой аккаунт в Roblox. Покупай редкие предметы, игровую валюту и многое другое по выгодным ценам.</p>
             <a href="#products-anchor" class="cta-btn">Перейти к товарам</a>
@@ -35,12 +38,13 @@
     </section>
 
     <div class="container content-container">
-        <!-- Секция Steal A Brainrot -->
-        <section id="brainrot" class="content-section active">
+        <!-- Каждая секция получает атрибут для анимации при прокрутке -->
+        <section id="brainrot" class="content-section active" data-scroll-anim>
             <h2 id="products-anchor">Steal A Brainrot</h2>
             <div class="product-grid">
-                <!-- Товар 1 -->
-                <div class="product-card">
+                <!-- Карточки товаров с атрибутами для анимации и эффектом сияния -->
+                <div class="product-card" data-scroll-anim>
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Tralalero" alt="Extinct Tralalero">
                     <h3>Extinct Tralalero</h3>
                     <div class="price-info">
@@ -51,10 +55,10 @@
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
+                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/offer?id=52721802">Купить</button>
                 </div>
-                <!-- Товар 2 -->
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim data-anim-delay="0.1s">
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Spyderini" alt="Sammyni Spyderini">
                     <h3>Sammyni Spyderini</h3>
                     <div class="price-info">
@@ -65,10 +69,10 @@
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
+                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/offer?id=52721603">Купить</button>
                 </div>
-                <!-- Товар 3 -->
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim data-anim-delay="0.2s">
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Bombinitos" alt="Los Bombinitos">
                     <h3>Los Bombinitos</h3>
                     <div class="price-info">
@@ -79,10 +83,10 @@
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
+                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/offer?id=52721157">Купить</button>
                 </div>
-                <!-- Товар 4 (Акционный) -->
-                <div class="product-card on-sale">
+                <div class="product-card on-sale" data-scroll-anim data-anim-delay="0.3s">
+                    <div class="card-shine"></div>
                     <div class="sale-badge">ХИТ!</div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=PICCIONE" alt="PICCIONE MACCHINA">
                     <h3>PICCIONE MACCHINA</h3>
@@ -94,20 +98,21 @@
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
+                    <button class="buy-btn" data-funpay-url="https://funpay.com/lots/offer?id=51558406">Купить</button>
                 </div>
             </div>
         </section>
 
-        <!-- Секция Grow a garden -->
-        <section id="garden" class="content-section">
+        <!-- Остальные секции аналогично -->
+        <section id="garden" class="content-section" data-scroll-anim>
             <h2>Grow a garden</h2>
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim>
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Bald+Eagle" alt="Bald Eagle">
                     <h3>Bald Eagle</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="29">29 руб.</p>
+                        <p class="price" data-base-price="">Нет в наличии.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -116,11 +121,12 @@
                     </div>
                     <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim data-anim-delay="0.1s">
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Blood+Kiwi" alt="Blood Kiwi">
                     <h3>Blood Kiwi</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="22">22 руб.</p>
+                        <p class="price" data-base-price="">Нет в наличии.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -129,11 +135,12 @@
                     </div>
                     <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim data-anim-delay="0.2s">
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Poseidon" alt="Poseidon Plant">
                     <h3>Poseidon Plant</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="77">77 руб.</p>
+                        <p class="price" data-base-price="">Нет в наличии.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -145,15 +152,15 @@
             </div>
         </section>
 
-        <!-- Секция Murder Mystery 2 -->
-        <section id="mm2" class="content-section">
+        <section id="mm2" class="content-section" data-scroll-anim>
             <h2>Murder Mystery 2</h2>
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim>
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Carrot+Bunny" alt="Carrot Bunny">
                     <h3>Carrot Bunny</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="47">47 руб.</p>
+                        <p class="price" data-base-price="">Нет в наличии.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -162,11 +169,12 @@
                     </div>
                     <button class="buy-btn" data-funpay-url="https://funpay.com/lots/...">Купить</button>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-scroll-anim data-anim-delay="0.1s">
+                    <div class="card-shine"></div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=Moon+Knife" alt="Moon Knife">
                     <h3>Moon Knife</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="59">59 руб.</p>
+                        <p class="price" data-base-price="">Нет в наличии.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -178,16 +186,16 @@
             </div>
         </section>
 
-        <!-- Секция Акции -->
-        <section id="promo" class="content-section">
+        <section id="promo" class="content-section" data-scroll-anim>
             <h2>Горячие предложения</h2>
             <div class="product-grid">
-                <div class="product-card on-sale">
+                <div class="product-card on-sale" data-scroll-anim>
+                    <div class="card-shine"></div>
                     <div class="sale-badge">ХИТ!</div>
                     <img src="https://placehold.co/300x200/1a1a2e/e0e0e0?text=PICCIONE" alt="PICCIONE MACCHINA">
                     <h3>PICCIONE MACCHINA</h3>
                     <div class="price-info">
-                        <p class="price" data-base-price="14">14 руб.</p>
+                        <p class="price" data-base-price="14">14 Руб.</p>
                         <div class="quantity-selector">
                             <button class="quantity-btn minus">-</button>
                             <input type="number" class="quantity-input" value="1" min="1">
@@ -199,14 +207,17 @@
             </div>
         </section>
 
-        <!-- Секция Контакты -->
-        <section id="contacts" class="content-section">
+        <section id="contacts" class="content-section" data-scroll-anim>
             <h2>Наши контакты</h2>
             <div class="contact-links">
-                <div class="contact-links">
-                    <a href="https://t.me/RobloxStoreSite" target="_blank" class="contact-link telegram"><i class="fab fa-telegram"></i><span>Telegram</span></a>
-                    <a href="https://t.me/SuppStoreRBBot" target="_blank" class="contact-link support"><i class="fas fa-headset"></i><span>Поддержка</span></a>
-                </div>
+                <a href="https://t.me/RobloxStoreSite" target="_blank" class="contact-link telegram" data-scroll-anim data-anim-delay="0.1s">
+                    <i class="fab fa-telegram"></i>
+                    <span>Канал Telegram</span>
+                </a>
+                <a href="https://t.me/SuppStoreRBBot" target="_blank" class="contact-link support" data-scroll-anim data-anim-delay="0.2s">
+                    <i class="fas fa-headset"></i>
+                    <span>Поддержка</span>
+                </a>
             </div>
         </section>
     </div>
@@ -214,10 +225,12 @@
 
 <footer>
     <div class="container">
-        <p>&copy; 2025 Roblox STORE. Сайт чуть не подлежал аборту.</p>
+        <p>&copy; 2025 Roblox STORE. Все права защищены.</p>
     </div>
 </footer>
 
+<!-- Подключаем библиотеку для анимированного фона -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
